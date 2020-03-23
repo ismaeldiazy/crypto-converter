@@ -1,3 +1,7 @@
+// Instantiate interface class
+const ui = new Interface();
+
+
 // Read form
 const form = document.querySelector('#formulario');
 
@@ -16,7 +20,7 @@ form.addEventListener('submit', (e) => {
 
     // Check both fields are not empty
     if (selectedCoin === '' || selectedCrypto === '') {
-        console.log('error');
+        ui.showMsg('Both fields have to be filled', 'alert bg-danger text-center');
     }else {
         console.log('tot be');
     }
