@@ -10,7 +10,18 @@ class Interface {
     createSelect() {
         converter.getApiCryptoCoins()
             .then(coins => {
-                console.log(coins)
+                // Create select options dynamically
+                const select = document.querySelector('#criptomoneda');
+                for( const [key, value] of Object.entries(coins.coins.Data)) {
+                    // Create option
+                    const option = document.createElement('option');
+                    // Give Symbol value to the option
+                    option.value = value.Symbol;
+                    // Give CoinName as text content
+                    option.appendChild(document.createTextNode(value.CoinName));
+                    // Add option to the select
+                    select.appendChild(option);
+                }
             })
     }
 

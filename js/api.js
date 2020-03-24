@@ -12,7 +12,6 @@ class API {
         // Json response
         const coins = await getCoinsUrl.json();
     
-        console.log(coins);
         return {
             coins
         }
