@@ -1,7 +1,8 @@
 // Instantiate interface class
+const converter = new API('f01d38790948c3037eeb3f888585f635a4618c6f577d280c9c6654172886cd1c');
 const ui = new Interface();
 
-
+converter.getApiCryptoCoins();
 // Read form
 const form = document.querySelector('#formulario');
 

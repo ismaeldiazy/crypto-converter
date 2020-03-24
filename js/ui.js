@@ -1,5 +1,19 @@
 class Interface {
 
+    constructor() {
+        this.init();
+    }
+    init() {
+        this.createSelect();
+    }
+
+    createSelect() {
+        converter.getApiCryptoCoins()
+            .then(coins => {
+                console.log(coins)
+            })
+    }
+
     showMsg(msg, classes) {
         const div = document.createElement('div');
         div.className = classes;
