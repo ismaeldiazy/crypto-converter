@@ -2,7 +2,6 @@
 const converter = new API('f01d38790948c3037eeb3f888585f635a4618c6f577d280c9c6654172886cd1c');
 const ui = new Interface();
 
-converter.getApiCryptoCoins();
 // Read form
 const form = document.querySelector('#formulario');
 
@@ -23,7 +22,12 @@ form.addEventListener('submit', (e) => {
     if (selectedCoin === '' || selectedCrypto === '') {
         ui.showMsg('Both fields have to be filled', 'alert bg-danger text-center');
     }else {
-        console.log('tot be');
+        // Request to API
+        converter.getValues(selectedCoin, selectedCrypto)
+            .then(data => {
+                console.log(data)
+            })
+        
     }
 
 });

@@ -16,4 +16,17 @@ class API {
             coins
         }
     }
+
+    async getValues(coin, crytpoCoin) {
+        const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${crytpoCoin}&tsyms=${coin}&api_key=${this.apikey}`;
+
+        // Consult REST API
+        const urlConvert = await fetch(url);
+        // API response into json
+        const response = await urlConvert.json();
+
+        return {
+            response
+        }
+    }
 }
