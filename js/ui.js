@@ -38,5 +38,27 @@ class Interface {
         setTimeout( () => {
             document.querySelector('.mensajes div').remove();
         }, 3000);
-    }   
+    }
+    
+    // Print the result of the conversion
+    printResult(response, coin, crypto) {
+        
+        const coinData = response[crypto][coin];
+
+        // // Reduce decimal numbers to 2 digits
+        let price = coinData.PRICE.toFixed(2);
+        // Create template
+        let templateHTML = `
+            <div class="card bg-success">
+                <div class="card-body text-light">
+                    <h2 class="card-title">Result:</h2>
+                    <p>The value of 1 ${coinData.FROMSYMBOL} to ${coinData.TOSYMBOL} is ${price} </p>
+                </div>
+            </div>
+        `
+
+        // Insert template into the DOM
+        document.querySelector('#resultado').innerHTML = templateHTML;
+    }
+
 }

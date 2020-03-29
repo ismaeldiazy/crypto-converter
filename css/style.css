@@ -5,21 +5,21 @@ body {
 }
 h1 {
     font-size: 34px;
-    color: white;
-    font-family: 'Playfair Display', serif;
+    color: rgb(243, 239, 239);
+    /* font-family: 'Playfair Display', serif; */
 }
 form {
     margin: 50px auto;
 }
 .contenido-principal {
     margin: 50px auto;
-    background-color: white;
+    background-color: rgb(243, 239, 239);
     -webkit-box-shadow: -1px 20px 52px -13px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 20px 52px -13px rgba(0,0,0,0.75);
     box-shadow: -1px 20px 52px -13px rgba(0,0,0,0.75);
 }
 .mensajes {
-    color: white;
+    color: rgb(243, 239, 239);
 }
 #resultado {
     text-align: center;

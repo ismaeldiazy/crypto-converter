@@ -25,7 +25,7 @@ form.addEventListener('submit', (e) => {
         // Request to API
         converter.getValues(selectedCoin, selectedCrypto)
             .then(data => {
-                console.log(data)
+                ui.printResult(data.response.RAW, selectedCoin, selectedCrypto);
             })
         
     }
