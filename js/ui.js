@@ -52,7 +52,7 @@ class Interface {
             <div class="card bg-success">
                 <div class="card-body text-light">
                     <h2 class="card-title">Result:</h2>
-                    <p>The value of 1 ${coinData.FROMSYMBOL} to ${coinData.TOSYMBOL} is ${price} </p>
+                    <p>The value of 1 ${coinData.FROMSYMBOL} converted to ${coinData.TOSYMBOL} is ${price} </p>
                 </div>
             </div>
         `
