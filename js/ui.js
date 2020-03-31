@@ -42,6 +42,13 @@ class Interface {
     
     // Print the result of the conversion
     printResult(response, coin, crypto) {
+
+        // In case there's a previous result
+        const previousResult = document.querySelector('#resultado > div');
+
+        if (previousResult) {
+            previousResult.remove();
+        }
         
         const coinData = response[crypto][coin];
         console.log(coinData);
@@ -62,9 +69,18 @@ class Interface {
                 </div>
             </div>
         `
+        this.displayHideSpinner('block');
+        // Simulate loading time (3s) to show the spinner
+        setTimeout(() => {
+            document.querySelector('#resultado').innerHTML = templateHTML;
+            this.displayHideSpinner('none');
+        }, 3000);
+    }
 
-        // Insert template into the DOM
-        document.querySelector('#resultado').innerHTML = templateHTML;
+    // Display spinner
+    displayHideSpinner(view) {
+        const spinner = document.querySelector('.contenido-spinner');
+        spinner.style.display = view;
     }
 
 }
